@@ -1,0 +1,27 @@
+{
+  "name": "Wiki Helper",
+  "description": "Displays small descriptions of a Wikipedia link on the same site.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://de.wikipedia.org/*",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://en.wikipedia.org/*", "https://de.wikipedia.org/*"],
+      "css": ["src/style.css"],
+      "js": ["src/wikihelper.js", "src/jquery.min.js"]
+    }
+  ],
+
+  "icons":
+  {
+	"16": "misc/wikihelper-icon.png",
+	"48": "misc/wikihelper-icon.png",
+	"128": "misc/wikihelper-icon.png"
+  },
+
+  "manifest_version": 2
+}
